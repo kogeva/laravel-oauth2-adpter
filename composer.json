@@ -14,5 +14,15 @@
     "require": {
         "laravel/framework": "*",
         "guzzlehttp/guzzle": "*"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kogeva\\LaravelOauth2Adapter\\Oauth2WebGuardServiceProvider"
+            ],
+            "aliases": {
+                "Oauth2Web": "Kogeva\\LaravelOauth2Adapter\\Facades\\Oauth2Web"
+            }
+        }
     }
 }
