@@ -13,6 +13,6 @@
     ],
     "require": {
         "laravel/framework": "*",
-        "guzzlehttp/guzzle": "^7.5"
+        "guzzlehttp/guzzle": "*"
     }
 }
