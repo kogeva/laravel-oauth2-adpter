@@ -43,7 +43,7 @@ class Oauth2Service
         $this->clientSecret = Config::get('oauth2-web.client_secret');
         $this->cacheOpenid = Config::get('oauth2-web.cache_openid', false);
         $this->callbackUrl = route('oauth2.callback');
-        $this->redirectLogout = Config::get('oauth2-web.redirect_logout');
+        $this->redirectLogout = Config::get('oauth2-web.redirect_logout', '');
 
         $this->httpClient = $client;
 
@@ -148,7 +148,7 @@ class Oauth2Service
      * @throws ContainerExceptionInterface
      * @throws NotFoundExceptionInterface
      */
-    public function retrieveToken(): array
+    public function retrieveToken(): ?array
     {
         return session()->get(self::$sessionKey);
     }

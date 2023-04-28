@@ -8,9 +8,9 @@ use Illuminate\Contracts\Auth\UserProvider;
 
 class Oauth2WebUserProvider implements UserProvider
 {
-    protected Authenticatable $model;
+    protected string $model;
 
-    public function __construct(Authenticatable $model)
+    public function __construct(string $model)
     {
         $this->model = $model;
     }

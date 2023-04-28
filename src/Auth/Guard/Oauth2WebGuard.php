@@ -12,7 +12,7 @@ use Kogeva\LaravelOauth2Adapter\Facades\Oauth2Web;
 
 class Oauth2WebGuard implements Guard
 {
-    protected ?Authenticatable $user;
+    protected ?Authenticatable $user = null;
     private UserProvider $provider;
     private Request $request;
 
